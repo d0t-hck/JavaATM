@@ -18,9 +18,8 @@ public class NationalBankAccount extends BankAccount{
 
     @Override
     public String toString() {
-        return "NationalBankAccount{" +
-                "fullname='" + fullname + '\'' +
-                ", " + super.toString() +
-                '}';
+        return "\tNationalBankAccount\n" +
+                "Fullname: " + fullname +
+                "\n" + super.toString();
     }
 }

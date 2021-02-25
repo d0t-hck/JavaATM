@@ -8,7 +8,7 @@ public class BankServiceImpl implements BankService {
     public BankAccount getClient(String accountNumber, String pinCode) {
         BankAccount client = null;
         for (BankAccount account : Database.getBankAccountList()) {
-            if(account.getAccountNumber().equals(accountNumber) && account.getPinCode().equals(pinCode)){
+            if (account.getAccountNumber().equals(accountNumber) && account.getPinCode().equals(pinCode)) {
                 client = account;
                 break;
             }
@@ -38,8 +38,12 @@ public class BankServiceImpl implements BankService {
 
     @Override
     public void withdrawal(BankAccount client, Integer money) {
-        Integer balance = client.getBalance() - money;
-        client.setBalance(balance);
+        Integer balance = client.getBalance();
+        if (money < balance) {
+            client.setBalance(balance - money);
+        } else {
+            System.out.println("Insufficient funds on the account!");
+        }
     }
 
     @Override

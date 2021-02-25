@@ -11,7 +11,7 @@ public class Database {
     private static List<BankAccount> bankAccountList = new ArrayList<>();
 
     static {
-        bankAccountList.add(new CityBankAccount("Alex", "Robertson", 20000, "kz3552", "9999"));
+        bankAccountList.add(new CityBankAccount("Alex", "Robertson", 20000, "kz2441", "9999"));
         bankAccountList.add(new CityBankAccount("Mike", "Tacker", 40000, "kz2241", "2431"));
         bankAccountList.add(new CityBankAccount("Billy", "Elroy", 80000, "kz1441", "4432"));
         bankAccountList.add(new CityBankAccount("Thorsten", "Borton", 3500000, "kz6268", "7847"));
